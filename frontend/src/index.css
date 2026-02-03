@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        --saffron: 0.65 0.18 45;
+        --gold: 0.75 0.15 75;
+        --cream: 0.97 0.02 85;
+        --background: 1 0 0;
+        --foreground: 0.2 0.02 30;
+        --primary: 0.65 0.18 45;
+        --primary-foreground: 1 0 0;
+        --border: 0.9 0.01 85;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+@layer utilities {
+    .text-saffron { color: oklch(var(--saffron)); }
+    .bg-saffron { background-color: oklch(var(--saffron)); }
+    .text-gold { color: oklch(var(--gold)); }
+    .bg-gold { background-color: oklch(var(--gold)); }
+    .bg-cream { background-color: oklch(var(--cream)); }
+}
